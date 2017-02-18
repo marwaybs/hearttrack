@@ -50,7 +50,8 @@ public class MyDBHandler extends SQLiteOpenHelper {
 
     public void deletePatient(String patient){
         SQLiteDatabase db = getWritableDatabase();
-        db.execSQL("DELETE FROM " + TABLE_PATIENTS + "WHERE " + COLUMN_NAME + "=\"" + patient + "\";" );
+        db.execSQL("DELETE FROM " + TABLE_PATIENTS + " WHERE " + COLUMN_NAME + "=\"" + patient + "\";" );
+
     }
 
     //print out the database as a string
