@@ -1,9 +1,5 @@
 package cas757.hearttrack;
 
-/**
- * Created by Bhaag on 2/18/2017.
- */
-
 public class Patient {
     private String name;
     private String lastName;

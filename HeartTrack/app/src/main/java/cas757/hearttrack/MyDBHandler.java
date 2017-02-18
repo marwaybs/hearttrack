@@ -14,7 +14,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "patients.db";
     public static final String TABLE_PATIENTS = "patients";
     public static final String COLUMN_ID = "_id";
-    public static final String COLUMN_NAME = "_name";
+    public static final String COLUMN_NAME = "name";
 
     public MyDBHandler(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, DATABASE_NAME, factory, DATABASE_VERSION);
@@ -25,7 +25,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String query = "CREATE TABLE " + TABLE_PATIENTS + "(" +
-                COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT ," +
                 COLUMN_NAME + " TEXT " +
                 ");";
         db.execSQL(query);
@@ -38,7 +38,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
     }
 
     //Add a new row to database
-    public void addUser(Patient patient){
+    public void addPatient(Patient patient){
         ContentValues values = new ContentValues();
         values.put(COLUMN_NAME, patient.getName());
         SQLiteDatabase db = getWritableDatabase();
@@ -57,17 +57,18 @@ public class MyDBHandler extends SQLiteOpenHelper {
     public String databaseToString(){
         String dbString= "";
         SQLiteDatabase db = getWritableDatabase();
-        String query = "SELECT * FROM " + TABLE_PATIENTS + " Where 1";
+        String query = "SELECT * FROM " + TABLE_PATIENTS + " WHERE 1";
 
         //Cursor point to a location in your results
-        Cursor c = db.rawQuery(query, null);
-        c.moveToFirst();
+        Cursor recordSet = db.rawQuery(query, null);
+        recordSet.moveToFirst();
 
-        while(!c.isAfterLast()){
-            if(c.getString(c.getColumnIndex("patient")) != null){ ///may be an error on this line
-                dbString += c.getString(c.getColumnIndex("patient"));
+        while(!recordSet.isAfterLast()){
+            if(recordSet.getString(recordSet.getColumnIndex("name")) != null){ ///may be an error on this line
+                dbString += recordSet.getString(recordSet.getColumnIndex("name"));
                 dbString += "\n";
             }
+            recordSet.moveToNext();
         }
         db.close();
         return dbString;
