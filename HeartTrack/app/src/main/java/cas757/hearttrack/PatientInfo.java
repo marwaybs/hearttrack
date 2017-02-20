@@ -24,8 +24,6 @@ public class PatientInfo extends AppCompatActivity {
 
     //Add a patient to the database
     public void addButtonClicked(View view){
-        Patient patient = new Patient(nameEditText.getText().toString());
-        dbHandler.addPatient(patient);
         printDatabase();
     }
 

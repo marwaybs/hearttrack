@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void redirectToPatientInfo(View view){
-        Intent  patientInfoIntent = new Intent(this,PatientInfo.class);
+        Intent  patientInfoIntent = new Intent(this,EditPatientInfo.class);
         startActivity(patientInfoIntent);
     }
 }
