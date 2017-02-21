@@ -1,18 +1,23 @@
+//patient class to store patient information. Database is updated through the information from this class
+
 package cas757.hearttrack;
 
 public class Patient {
+    //first page
     private String firstName;
     private String lastName;
     private int sex;
     private String email;
     private int phoneNumber;
 
+    //second page of medical information
     private String chronicCondition;
     private String allergies;
     private String medication;
     private String vitamins; //optional
     private String Supplements; //optional
 
+    //third page of relative and physician contact information
     private String relativeFirstName;
     private String relativeLastName;
     private String relativeEmail;
@@ -23,6 +28,7 @@ public class Patient {
     private String physicianEmail;
     private int physicianPhoneNumber;
 
+    //constuctor for patient
     public Patient(String firstName, String lastName, int sex, String email, int phoneNumber, String chronicCondition, String allergies, String medication, String vitamins, String supplements, String relativeFirstName, String relativeLastName, String relativeEmail, int relativePhoneNumber, String physicianFirstName, String physicianLastName, String physicianEmail, int physicianPhoneNumber) {
         this.firstName = firstName;
         this.lastName = lastName;

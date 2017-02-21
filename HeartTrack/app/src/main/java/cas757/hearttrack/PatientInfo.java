@@ -1,3 +1,5 @@
+///DOES NOTHING. WAS A TEST ACTIVITY. WILL BE DELETED SOON.
+
 package cas757.hearttrack;
 
 import android.support.v7.app.AppCompatActivity;
