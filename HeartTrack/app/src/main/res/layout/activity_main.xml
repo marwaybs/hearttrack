@@ -23,6 +23,7 @@
         android:layout_centerHorizontal="true"/>
 
     <!-- button to switch to the edit patient information page -->
+    <!--android:onClick defines what the button does when it is clicked. -->
     <Button
         android:text="Patient Info"
         android:layout_width="wrap_content"

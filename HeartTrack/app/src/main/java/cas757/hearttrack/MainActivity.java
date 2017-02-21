@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button patientInfoButton = (Button) findViewById(R.id.patientInfoButton); ///Not needed
+        Button patientInfoButton = (Button) findViewById(R.id.patientInfoButton); ///Not needed, creates a reference to the button in the java code
 
     }
 
