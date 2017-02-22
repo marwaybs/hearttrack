@@ -24,10 +24,12 @@ public class MyDBHandler extends SQLiteOpenHelper {
     public static final String COLUMN_CHRONICCONDITION = "chronicCondition";
     public static final String COLUMN_ALLERGIES = "allergies";
     public static final String COLUMN_MEDICATION = "medication";
-    public static final String COLUMN_RELATIVEFIRSTNAME = "firstName";
-    public static final String COLUMN_RELATIVELASTNAME = "lastName";
-    public static final String COLUMN_RELATIVEEMAIL = "example@example.com";
-    public static final String COLUMN_RELATIVEPHONENUMBER = "phoneNumber";
+    public static final String COLUMN_VITAMINS = "vitamins";
+    public static final String COLUMN_SUPPLEMENTS = "sups";
+    public static final String COLUMN_PERSONALFIRSTNAME = "firstName";
+    public static final String COLUMN_PERSONALLASTNAME = "lastName";
+    public static final String COLUMN_PERSONALEMAIL = "email";
+    public static final String COLUMN_PERSONALPHONENUMBER = "phoneNumber";
     public static final String COLUMN_PHYSICIANFIRSTNAME = "firstName";
     public static final String COLUMN_PHYSICIANLASTNAME = "lastName";
     public static final String COLUMN_PHYSICIANEMAIL = "email";
@@ -49,13 +51,15 @@ public class MyDBHandler extends SQLiteOpenHelper {
                 COLUMN_SEX + " INT " +
                 COLUMN_EMAIL + " TEXT " +
                 COLUMN_PHONENUMBER + " INT " +
-                COLUMN_CHRONICCONDITION + " STRING " +
+                COLUMN_CHRONICCONDITION + " TEXT " +
                 COLUMN_ALLERGIES+ " TEXT " +
                 COLUMN_MEDICATION + " TEXT " +
-                COLUMN_RELATIVEFIRSTNAME + " TEXT " +
-                COLUMN_RELATIVELASTNAME + " TEXT " +
-                COLUMN_RELATIVEEMAIL + " TEXT " +
-                COLUMN_RELATIVEPHONENUMBER + " INT " +
+                COLUMN_VITAMINS + " TEXT " +
+                COLUMN_SUPPLEMENTS + " TEXT " +
+                COLUMN_PERSONALFIRSTNAME + " TEXT " +
+                COLUMN_PERSONALLASTNAME + " TEXT " +
+                COLUMN_PERSONALEMAIL + " TEXT " +
+                COLUMN_PERSONALPHONENUMBER + " INT " +
                 COLUMN_PHYSICIANFIRSTNAME + " TEXT " +
                 COLUMN_PHYSICIANLASTNAME + " TEXT " +
                 COLUMN_PHYSICIANEMAIL + " TEXT " +
@@ -73,22 +77,24 @@ public class MyDBHandler extends SQLiteOpenHelper {
     //Add a new row to database. Takes an instance of patient class and puts attributes from that object into database.
     public void addPatient(Patient patient){
         ContentValues values = new ContentValues(); //holds values to put into database
-        values.put(COLUMN_FIRSTNAME, patient.getFirstName()); //putting information into the content object
-        values.put(COLUMN_LASTNAME, patient.getLastName());
-        values.put(COLUMN_SEX, patient.getSex());
-        values.put(COLUMN_EMAIL, patient.getEmail());
-        values.put(COLUMN_PHONENUMBER, patient.getPhoneNumber());
-        values.put(COLUMN_CHRONICCONDITION, patient.getChronicCondition());
-        values.put(COLUMN_ALLERGIES, patient.getAllergies());
-        values.put(COLUMN_MEDICATION, patient.getMedication());
-        values.put(COLUMN_RELATIVEFIRSTNAME, patient.getRelativeFirstName());
-        values.put(COLUMN_RELATIVELASTNAME, patient.getRelativeLastName());
-        values.put(COLUMN_RELATIVEEMAIL, patient.getRelativeEmail());
-        values.put(COLUMN_RELATIVEPHONENUMBER, patient.getRelativePhoneNumber());
-        values.put(COLUMN_PHYSICIANFIRSTNAME, patient.getPhysicianFirstName());
-        values.put(COLUMN_PHYSICIANLASTNAME, patient.getPhysicianLastName());
-        values.put(COLUMN_PHYSICIANEMAIL, patient.getPhysicianEmail());
-        values.put(COLUMN_PHYSICIANPHONENUMBER, patient.getPhysicianPhoneNumber());
+        values.put(COLUMN_FIRSTNAME, patient.get_firstName()); //putting information into the content object
+        values.put(COLUMN_LASTNAME, patient.get_lastName());
+        values.put(COLUMN_SEX, patient.get_sex());
+        values.put(COLUMN_EMAIL, patient.get_email());
+        values.put(COLUMN_PHONENUMBER, patient.get_phoneNumber());
+        values.put(COLUMN_CHRONICCONDITION, patient.get_chronicCondition());
+        values.put(COLUMN_ALLERGIES, patient.get_allergies());
+        values.put(COLUMN_MEDICATION, patient.get_medication());
+        values.put(COLUMN_VITAMINS, patient.get_vitamins());
+        values.put(COLUMN_SUPPLEMENTS, patient.get_Supplements());
+        values.put(COLUMN_PERSONALFIRSTNAME, patient.get_relativeFirstName());
+        values.put(COLUMN_PERSONALLASTNAME, patient.get_relativeLastName());
+        values.put(COLUMN_PERSONALEMAIL, patient.get_relativeEmail());
+        values.put(COLUMN_PERSONALPHONENUMBER, patient.get_relativePhoneNumber());
+        values.put(COLUMN_PHYSICIANFIRSTNAME, patient.get_physicianFirstName());
+        values.put(COLUMN_PHYSICIANLASTNAME, patient.get_physicianLastName());
+        values.put(COLUMN_PHYSICIANEMAIL, patient.get_physicianEmail());
+        values.put(COLUMN_PHYSICIANPHONENUMBER, patient.get_phoneNumber());
         SQLiteDatabase db = getWritableDatabase();
         db.insert(TABLE_PATIENTS, null, values);
         db.close();

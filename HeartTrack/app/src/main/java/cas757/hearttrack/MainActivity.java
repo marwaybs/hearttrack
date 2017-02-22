@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button patientInfoButton = (Button) findViewById(R.id.patientInfoButton); ///Not needed, creates a reference to the button in the java code
+        //Button patientInfoButton = (Button) findViewById(R.id.patientInfoButton); ///Not needed, creates a reference to the button in the java code
 
     }
 
@@ -27,4 +27,6 @@ public class MainActivity extends AppCompatActivity {
         Intent  patientInfoIntent = new Intent(this,EditPatientInfo.class);
         startActivity(patientInfoIntent);
     }
+
+
 }

@@ -21,11 +21,9 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:fillViewport="false"
-        android:clipToPadding="false"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:clipToPadding="false">
 
 
         <TableLayout
@@ -48,7 +46,8 @@
                     android:inputType="textPersonName"
                     android:ems="10"
                     android:id="@+id/firstNameEditText"
-                    android:hint="Ex. John" />
+                    android:hint="Ex. John"
+                    android:text="John" />
 
             </TableRow>
 
@@ -68,7 +67,8 @@
                     android:inputType="textPersonName"
                     android:ems="10"
                     android:id="@+id/lastNameEditText"
-                    android:hint="Ex. Smith" />
+                    android:hint="Ex. Smith"
+                    android:text="Smith" />
 
             </TableRow>
 
@@ -87,8 +87,9 @@
                     android:layout_height="wrap_content"
                     android:inputType="number"
                     android:ems="10"
-                    android:id="@+id/editText13"
-                    android:hint="1 or 0" />
+                    android:id="@+id/sexEditText"
+                    android:hint="1 or 0"
+                    android:text="1" />
 
             </TableRow>
 
@@ -106,9 +107,212 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:id="@+id/editText14"
+                    android:id="@+id/emailEditText"
                     android:hint="example@example.com"
-                    android:inputType="textEmailAddress" />
+                    android:inputType="textEmailAddress"
+                    android:text="john@john.com" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/phoneNumberEditText">
+
+                <TextView
+                    android:text="Phone Number:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/PhoneNumberTextView" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:id="@+id/PhoneNumberEditText"
+                    android:hint="1231231234"
+                    android:text="1231231234"
+                    android:inputType="number" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:text="Chonic Conditions:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chronicConditionsTextView" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/chronicConditionsEditText"
+                    android:hint="Blank if none"
+                    android:text="chronic" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:text="Allergies:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/allergiesTextView" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/allergiesEditText"
+                    android:hint="Blank if none"
+                    android:text="aller" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:text="Medication:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/medicationTextView" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/medicationEditText"
+                    android:hint="Blank if none"
+                    android:text="med" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:text="Vitamins:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/vitaminsTextView" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/vitaminsEditText"
+                    android:hint="Blank if none"
+                    android:text="vit" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:text="Supplements:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/supplementsTextView" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/supplementsEditText"
+                    android:hint="Blank if none"
+                    android:text="sup" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:text="Personal Contact Information:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/relativeSeperator" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="First Name:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/personalFirstNameTextView" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/personalFirstNameEditText"
+                    android:hint="Ex. Jasmine"
+                    android:text="Jasmine" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:text="Last Name:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/personalLastNameTextView" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/personalLastNameEditText"
+                    android:hint="Ex. Lee"
+                    android:text="Lee" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:text="Email:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/personalEmailTextView" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/personalEmailEditText"
+                    android:hint="example@example.com"
+                    android:text="cat@cat.com" />
 
             </TableRow>
 
@@ -120,15 +324,16 @@
                     android:text="Phone Number:"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/PhoneNumberTextView" />
+                    android:id="@+id/personalPhoneNumberTextView" />
 
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="phone"
                     android:ems="10"
-                    android:id="@+id/PhoneNumberEditText"
-                    android:hint="1231231234" />
+                    android:id="@+id/personalPhoneNumberEditText"
+                    android:hint="1231231234"
+                    android:text="1231231234"
+                    android:inputType="number" />
 
             </TableRow>
 
@@ -137,18 +342,10 @@
                 android:layout_height="match_parent" >
 
                 <TextView
-                    android:text="TextView"
+                    android:text="Physician Contact Information:"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView21" />
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:text="Name"
-                    android:ems="10"
-                    android:id="@+id/editText16" />
+                    android:id="@+id/physicianSeperator" />
 
             </TableRow>
 
@@ -157,18 +354,19 @@
                 android:layout_height="match_parent" >
 
                 <TextView
-                    android:text="TextView"
+                    android:text="First Name:"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView22" />
+                    android:id="@+id/physicianFirstNameTextView" />
 
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
-                    android:text="Name"
                     android:ems="10"
-                    android:id="@+id/editText15" />
+                    android:id="@+id/physicianFirstNameEditText"
+                    android:hint="Ex. Mickey"
+                    android:text="Mickey" />
 
             </TableRow>
 
@@ -177,40 +375,19 @@
                 android:layout_height="match_parent" >
 
                 <TextView
-                    android:text="TextView"
+                    android:text="Last Name:"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView23" />
+                    android:id="@+id/physicianLastNameTextView" />
 
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
-                    android:text="Name"
                     android:ems="10"
-                    android:id="@+id/editText18" />
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-
-                >
-
-                <TextView
-                    android:text="TextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView24" />
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:text="Name"
-                    android:ems="10"
-                    android:id="@+id/editText19" />
+                    android:id="@+id/physicianLastNameEditText"
+                    android:hint="Ex. Mouse"
+                    android:text="Donald" />
 
             </TableRow>
 
@@ -219,18 +396,19 @@
                 android:layout_height="match_parent" >
 
                 <TextView
-                    android:text="TextView"
+                    android:text="Email:"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView25" />
+                    android:id="@+id/physicianEmailTextView" />
 
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
-                    android:text="Name"
                     android:ems="10"
-                    android:id="@+id/editText24" />
+                    android:id="@+id/physicianEmailEditText"
+                    android:hint="example@example.com"
+                    android:text="monkey@cat.com" />
 
             </TableRow>
 
@@ -239,18 +417,19 @@
                 android:layout_height="match_parent" >
 
                 <TextView
-                    android:text="TextView"
+                    android:text="Phone Number:"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView26" />
+                    android:id="@+id/physicianPhoneNumberTextView" />
 
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:text="Name"
                     android:ems="10"
-                    android:id="@+id/editText26" />
+                    android:id="@+id/physicianPhoneNumberEditText"
+                    android:hint="1231231234"
+                    android:text="1231231234"
+                    android:inputType="number" />
 
             </TableRow>
 
@@ -258,80 +437,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" >
 
-                <TextView
-                    android:text="TextView"
+                <Button
+                    android:text="Submit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView27" />
+                    android:id="@+id/submitButton"
+                    android:onClick="submitButtonClicked"/>
 
-                <EditText
+                <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:text="Name"
-                    android:ems="10"
-                    android:id="@+id/editText23" />
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <TextView
-                    android:text="TextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView28" />
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:text="Name"
-                    android:ems="10"
-                    android:id="@+id/editText22" />
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <TextView
-                    android:text="TextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView30" />
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:text="Name"
-                    android:ems="10"
-                    android:id="@+id/editText21" />
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <TextView
-                    android:text="TextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView29" />
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:text="Name"
-                    android:ems="10"
-                    android:id="@+id/editText20" />
-
+                    android:id="@+id/deleteButton" />
             </TableRow>
         </TableLayout>
     </ScrollView>

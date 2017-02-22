@@ -1,199 +1,195 @@
 //patient class to store patient information. Database is updated through the information from this class
 
 package cas757.hearttrack;
-
+//add username and password, dob, male female drop down
 public class Patient {
     //first page
-    private String firstName;
-    private String lastName;
-    private int sex;
-    private String email;
-    private int phoneNumber;
+    private String _firstName;
+    private String _lastName;
+    private int _sex;
+    private String _email;
+    private int _phoneNumber;
 
     //second page of medical information
-    private String chronicCondition;
-    private String allergies;
-    private String medication;
-    private String vitamins; //optional
-    private String Supplements; //optional
+    private String _chronicCondition;
+    private String _allergies;
+    private String _medication;
+    private String _vitamins; //optional
+    private String _Supplements; //optional
 
     //third page of relative and physician contact information
-    private String relativeFirstName;
-    private String relativeLastName;
-    private String relativeEmail;
-    private int relativePhoneNumber;
+    private String _relativeFirstName;
+    private String _relativeLastName;
+    private String _relativeEmail;
+    private int _relativePhoneNumber;
 
-    private String physicianFirstName;
-    private String physicianLastName;
-    private String physicianEmail;
-    private int physicianPhoneNumber;
+    private String _physicianFirstName;
+    private String _physicianLastName;
+    private String _physicianEmail;
+    private int _physicianPhoneNumber;
 
-    //constuctor for patient
-    public Patient(String firstName, String lastName, int sex, String email, int phoneNumber, String chronicCondition, String allergies, String medication, String vitamins, String supplements, String relativeFirstName, String relativeLastName, String relativeEmail, int relativePhoneNumber, String physicianFirstName, String physicianLastName, String physicianEmail, int physicianPhoneNumber) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.sex = sex;
-        this.email = email;
-        this.phoneNumber = phoneNumber;
-        this.chronicCondition = chronicCondition;
-        this.allergies = allergies;
-        this.medication = medication;
-        this.vitamins = vitamins;
-        Supplements = supplements;
-        this.relativeFirstName = relativeFirstName;
-        this.relativeLastName = relativeLastName;
-        this.relativeEmail = relativeEmail;
-        this.relativePhoneNumber = relativePhoneNumber;
-        this.physicianFirstName = physicianFirstName;
-        this.physicianLastName = physicianLastName;
-        this.physicianEmail = physicianEmail;
-        this.physicianPhoneNumber = physicianPhoneNumber;
+    public Patient(String _firstName, String _lastName, int _sex, String _email, int _phoneNumber, String _chronicCondition, String _allergies, String _medication, String _vitamins, String _Supplements, String _relativeFirstName, String _relativeLastName, String _relativeEmail, int _relativePhoneNumber, String _physicianFirstName, String _physicianLastName, String _physicianEmail, int _physicianPhoneNumber) {
+        this._firstName = _firstName;
+        this._lastName = _lastName;
+        this._sex = _sex;
+        this._email = _email;
+        this._phoneNumber = _phoneNumber;
+        this._chronicCondition = _chronicCondition;
+        this._allergies = _allergies;
+        this._medication = _medication;
+        this._vitamins = _vitamins;
+        this._Supplements = _Supplements;
+        this._relativeFirstName = _relativeFirstName;
+        this._relativeLastName = _relativeLastName;
+        this._relativeEmail = _relativeEmail;
+        this._relativePhoneNumber = _relativePhoneNumber;
+        this._physicianFirstName = _physicianFirstName;
+        this._physicianLastName = _physicianLastName;
+        this._physicianEmail = _physicianEmail;
+        this._physicianPhoneNumber = _physicianPhoneNumber;
     }
 
-
-
-    public String getFirstName() {
-        return firstName;
+    public String get_firstName() {
+        return _firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void set_firstName(String _firstName) {
+        this._firstName = _firstName;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String get_lastName() {
+        return _lastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void set_lastName(String _lastName) {
+        this._lastName = _lastName;
     }
 
-    public int getSex() {
-        return sex;
+    public int get_sex() {
+        return _sex;
     }
 
-    public void setSex(int sex) {
-        this.sex = sex;
+    public void set_sex(int _sex) {
+        this._sex = _sex;
     }
 
-    public String getEmail() {
-        return email;
+    public String get_email() {
+        return _email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void set_email(String _email) {
+        this._email = _email;
     }
 
-    public int getPhoneNumber() {
-        return phoneNumber;
+    public int get_phoneNumber() {
+        return _phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void set_phoneNumber(int _phoneNumber) {
+        this._phoneNumber = _phoneNumber;
     }
 
-    public String getChronicCondition() {
-        return chronicCondition;
+    public String get_chronicCondition() {
+        return _chronicCondition;
     }
 
-    public void setChronicCondition(String chronicCondition) {
-        this.chronicCondition = chronicCondition;
+    public void set_chronicCondition(String _chronicCondition) {
+        this._chronicCondition = _chronicCondition;
     }
 
-    public String getAllergies() {
-        return allergies;
+    public String get_allergies() {
+        return _allergies;
     }
 
-    public void setAllergies(String allergies) {
-        this.allergies = allergies;
+    public void set_allergies(String _allergies) {
+        this._allergies = _allergies;
     }
 
-    public String getMedication() {
-        return medication;
+    public String get_medication() {
+        return _medication;
     }
 
-    public void setMedication(String medication) {
-        this.medication = medication;
+    public void set_medication(String _medication) {
+        this._medication = _medication;
     }
 
-    public String getVitamins() {
-        return vitamins;
+    public String get_vitamins() {
+        return _vitamins;
     }
 
-    public void setVitamins(String vitamins) {
-        this.vitamins = vitamins;
+    public void set_vitamins(String _vitamins) {
+        this._vitamins = _vitamins;
     }
 
-    public String getSupplements() {
-        return Supplements;
+    public String get_Supplements() {
+        return _Supplements;
     }
 
-    public void setSupplements(String supplements) {
-        Supplements = supplements;
+    public void set_Supplements(String _Supplements) {
+        this._Supplements = _Supplements;
     }
 
-    public String getRelativeFirstName() {
-        return relativeFirstName;
+    public String get_relativeFirstName() {
+        return _relativeFirstName;
     }
 
-    public void setRelativeFirstName(String relativeFirstName) {
-        this.relativeFirstName = relativeFirstName;
+    public void set_relativeFirstName(String _relativeFirstName) {
+        this._relativeFirstName = _relativeFirstName;
     }
 
-    public String getRelativeLastName() {
-        return relativeLastName;
+    public String get_relativeLastName() {
+        return _relativeLastName;
     }
 
-    public void setRelativeLastName(String relativeLastName) {
-        this.relativeLastName = relativeLastName;
+    public void set_relativeLastName(String _relativeLastName) {
+        this._relativeLastName = _relativeLastName;
     }
 
-    public String getRelativeEmail() {
-        return relativeEmail;
+    public String get_relativeEmail() {
+        return _relativeEmail;
     }
 
-    public void setRelativeEmail(String relativeEmail) {
-        this.relativeEmail = relativeEmail;
+    public void set_relativeEmail(String _relativeEmail) {
+        this._relativeEmail = _relativeEmail;
     }
 
-    public int getRelativePhoneNumber() {
-        return relativePhoneNumber;
+    public int get_relativePhoneNumber() {
+        return _relativePhoneNumber;
     }
 
-    public void setRelativePhoneNumber(int relativePhoneNumber) {
-        this.relativePhoneNumber = relativePhoneNumber;
+    public void set_relativePhoneNumber(int _relativePhoneNumber) {
+        this._relativePhoneNumber = _relativePhoneNumber;
     }
 
-    public String getPhysicianFirstName() {
-        return physicianFirstName;
+    public String get_physicianFirstName() {
+        return _physicianFirstName;
     }
 
-    public void setPhysicianFirstName(String physicianFirstName) {
-        this.physicianFirstName = physicianFirstName;
+    public void set_physicianFirstName(String _physicianFirstName) {
+        this._physicianFirstName = _physicianFirstName;
     }
 
-    public String getPhysicianLastName() {
-        return physicianLastName;
+    public String get_physicianLastName() {
+        return _physicianLastName;
     }
 
-    public void setPhysicianLastName(String physicianLastName) {
-        this.physicianLastName = physicianLastName;
+    public void set_physicianLastName(String _physicianLastName) {
+        this._physicianLastName = _physicianLastName;
     }
 
-    public String getPhysicianEmail() {
-        return physicianEmail;
+    public String get_physicianEmail() {
+        return _physicianEmail;
     }
 
-    public void setPhysicianEmail(String physicianEmail) {
-        this.physicianEmail = physicianEmail;
+    public void set_physicianEmail(String _physicianEmail) {
+        this._physicianEmail = _physicianEmail;
     }
 
-    public int getPhysicianPhoneNumber() {
-        return physicianPhoneNumber;
+    public int get_physicianPhoneNumber() {
+        return _physicianPhoneNumber;
     }
 
-    public void setPhysicianPhoneNumber(int physicianPhoneNumber) {
-        this.physicianPhoneNumber = physicianPhoneNumber;
+    public void set_physicianPhoneNumber(int _physicianPhoneNumber) {
+        this._physicianPhoneNumber = _physicianPhoneNumber;
     }
-
 }
