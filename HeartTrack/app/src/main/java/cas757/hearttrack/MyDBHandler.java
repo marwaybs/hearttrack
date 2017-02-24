@@ -16,24 +16,24 @@ public class MyDBHandler extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "patients.db";
     public static final String TABLE_PATIENTS = "patients";
     public static final String COLUMN_ID = "_id";
-    public static final String COLUMN_FIRSTNAME = "firstName";
-    public static final String COLUMN_LASTNAME = "lastName";
+    public static final String COLUMN_FIRSTNAME = "firstname";
+    public static final String COLUMN_LASTNAME = "lastname";
     public static final String COLUMN_SEX = "sex";
     public static final String COLUMN_EMAIL = "email";
-    public static final String COLUMN_PHONENUMBER = "phoneNumber";
-    public static final String COLUMN_CHRONICCONDITION = "chronicCondition";
+    public static final String COLUMN_PHONENUMBER = "phonenumber";
+    public static final String COLUMN_CHRONICCONDITION = "chroniccondition";
     public static final String COLUMN_ALLERGIES = "allergies";
     public static final String COLUMN_MEDICATION = "medication";
     public static final String COLUMN_VITAMINS = "vitamins";
-    public static final String COLUMN_SUPPLEMENTS = "sups";
-    public static final String COLUMN_PERSONALFIRSTNAME = "firstName";
-    public static final String COLUMN_PERSONALLASTNAME = "lastName";
-    public static final String COLUMN_PERSONALEMAIL = "email";
-    public static final String COLUMN_PERSONALPHONENUMBER = "phoneNumber";
-    public static final String COLUMN_PHYSICIANFIRSTNAME = "firstName";
-    public static final String COLUMN_PHYSICIANLASTNAME = "lastName";
-    public static final String COLUMN_PHYSICIANEMAIL = "email";
-    public static final String COLUMN_PHYSICIANPHONENUMBER = "phoneNumber";
+    public static final String COLUMN_SUPPLEMENTS = "supplementss";
+    public static final String COLUMN_PERSONALFIRSTNAME = "personalfirstname";
+    public static final String COLUMN_PERSONALLASTNAME = "personallastname";
+    public static final String COLUMN_PERSONALEMAIL = "personalemail";
+    public static final String COLUMN_PERSONALPHONENUMBER = "personalphoneNumber";
+    public static final String COLUMN_PHYSICIANFIRSTNAME = "physicianfirstname";
+    public static final String COLUMN_PHYSICIANLASTNAME = "physicianlastName";
+    public static final String COLUMN_PHYSICIANEMAIL = "physicianemail";
+    public static final String COLUMN_PHYSICIANPHONENUMBER = "physicianphoneNumber";
 
     //constructor for database handler
     public MyDBHandler(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
@@ -45,24 +45,24 @@ public class MyDBHandler extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String query = "CREATE TABLE " + TABLE_PATIENTS + "(" +
-                COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT ," +
-                COLUMN_FIRSTNAME + " TEXT " +
-                COLUMN_LASTNAME + " TEXT " +
-                COLUMN_SEX + " INT " +
-                COLUMN_EMAIL + " TEXT " +
-                COLUMN_PHONENUMBER + " INT " +
-                COLUMN_CHRONICCONDITION + " TEXT " +
-                COLUMN_ALLERGIES+ " TEXT " +
-                COLUMN_MEDICATION + " TEXT " +
-                COLUMN_VITAMINS + " TEXT " +
-                COLUMN_SUPPLEMENTS + " TEXT " +
-                COLUMN_PERSONALFIRSTNAME + " TEXT " +
-                COLUMN_PERSONALLASTNAME + " TEXT " +
-                COLUMN_PERSONALEMAIL + " TEXT " +
-                COLUMN_PERSONALPHONENUMBER + " INT " +
-                COLUMN_PHYSICIANFIRSTNAME + " TEXT " +
-                COLUMN_PHYSICIANLASTNAME + " TEXT " +
-                COLUMN_PHYSICIANEMAIL + " TEXT " +
+                COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                COLUMN_FIRSTNAME + " TEXT," +
+                COLUMN_LASTNAME + " TEXT," +
+                COLUMN_SEX + " INT," +
+                COLUMN_EMAIL + " TEXT," +
+                COLUMN_PHONENUMBER + " INT," +
+                COLUMN_CHRONICCONDITION + " TEXT," +
+                COLUMN_ALLERGIES+ " TEXT," +
+                COLUMN_MEDICATION + " TEXT," +
+                COLUMN_VITAMINS + " TEXT," +
+                COLUMN_SUPPLEMENTS + " TEXT," +
+                COLUMN_PERSONALFIRSTNAME + " TEXT," +
+                COLUMN_PERSONALLASTNAME + " TEXT," +
+                COLUMN_PERSONALEMAIL + " TEXT," +
+                COLUMN_PERSONALPHONENUMBER + " INT," +
+                COLUMN_PHYSICIANFIRSTNAME + " TEXT," +
+                COLUMN_PHYSICIANLASTNAME + " TEXT," +
+                COLUMN_PHYSICIANEMAIL + " TEXT," +
                 COLUMN_PHYSICIANPHONENUMBER + " INT " +
                 ");";
         db.execSQL(query);
@@ -95,6 +95,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
         values.put(COLUMN_PHYSICIANLASTNAME, patient.get_physicianLastName());
         values.put(COLUMN_PHYSICIANEMAIL, patient.get_physicianEmail());
         values.put(COLUMN_PHYSICIANPHONENUMBER, patient.get_phoneNumber());
+
         SQLiteDatabase db = getWritableDatabase();
         db.insert(TABLE_PATIENTS, null, values);
         db.close();
