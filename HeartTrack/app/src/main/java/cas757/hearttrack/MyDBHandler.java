@@ -97,6 +97,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
         values.put(COLUMN_PHYSICIANPHONENUMBER, patient.get_phoneNumber());
 
         SQLiteDatabase db = getWritableDatabase();
+        db.delete(TABLE_PATIENTS, null, null); //clears table before adding a new patient to ensure only one person at a time.
         db.insert(TABLE_PATIENTS, null, values);
         db.close();
     }
@@ -108,24 +109,27 @@ public class MyDBHandler extends SQLiteOpenHelper {
 
     }
 
-    //print out the database as a string
-    //currently only prints name
-    public String databaseToString(){
+    //print out inputted column from the database as a string
+    public String databaseToString(String column){  //takes in column name of the column you want returned from the database.
         String dbString= "";
         SQLiteDatabase db = getWritableDatabase();
-        String query = "SELECT * FROM " + TABLE_PATIENTS + " WHERE 1";
+        String query = "SELECT "+ column + " FROM " + TABLE_PATIENTS + ";"  ;
 
         //Cursor point to a location in your results
         Cursor recordSet = db.rawQuery(query, null);
         recordSet.moveToFirst(); //puts the cursor at the first position
-
+        if(recordSet.getString(recordSet.getColumnIndex(column)) != null){ ///returns an empty string if the database is empty.
+            dbString = recordSet.getString(recordSet.getColumnIndex(column));
+        }
+/**
         while(!recordSet.isAfterLast()){ //add names to a list until reaches the end of the database
-            if(recordSet.getString(recordSet.getColumnIndex("name")) != null){ ///may be an error on this line
+            if(recordSet.getString(recordSet.getColumnIndex("firstname")) != null){ ///may be an error on this line
                 dbString += recordSet.getString(recordSet.getColumnIndex("name"));
                 dbString += "\n";
             }
             recordSet.moveToNext();
         }
+ **/
         db.close();
         return dbString;
     }

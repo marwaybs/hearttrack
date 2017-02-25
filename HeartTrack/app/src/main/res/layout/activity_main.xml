@@ -32,4 +32,14 @@
         android:layout_alignParentStart="true"
         android:id="@+id/patientInfoButton"
         android:onClick="redirectToPatientInfo"/>
+
+    <Button
+        android:text="Patient Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/patientInfoButton"
+        android:layout_toEndOf="@+id/Welcome"
+        android:layout_marginStart="24dp"
+        android:id="@+id/patientProfileButton"
+        android:onClick="redirectToPatientProfile"/>
 </RelativeLayout>

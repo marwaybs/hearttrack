@@ -46,10 +46,10 @@
                 android:id="@+id/textView2" />
 
             <TextView
-                android:text="Marie Simpson"
+                android:text="No Patient Entered"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView3" />
+                android:id="@+id/PIPName" />
 
             <TextView
                 android:text="Email"

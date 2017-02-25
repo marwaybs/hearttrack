@@ -28,5 +28,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(patientInfoIntent);
     }
 
+    public void redirectToPatientProfile(View view){
+        Intent patientProfileIntent = new Intent(this,PatientInformationProfile.class);
+        startActivity(patientProfileIntent);
+    }
+
 
 }
