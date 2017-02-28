@@ -15,9 +15,15 @@ public class PatientInformationProfile extends AppCompatActivity {
         dbHandler = new MyDBHandler(this, null, null, 1);
 
         TextView name = (TextView) findViewById(R.id.PIPName);
+        TextView email = (TextView) findViewById(R.id.PIPEmail);
+        TextView birthday = (TextView) findViewById(R.id.PIPBirthday);
+        TextView sex = (TextView) findViewById(R.id.PIPSex);
+
+
+
+
         name.setText(dbHandler.databaseToString("firstname"));
+        email.setText(dbHandler.databaseToString("email"));
+        sex.setText(dbHandler.databaseToString(("sex")));
     }
 }
-
-
-///HOW TO PASS PATIENT NAME INTO THIS ACTIVITY?

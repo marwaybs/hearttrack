@@ -61,7 +61,7 @@
                 android:text="No Patient Entered"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView3" />
+                android:id="@+id/PIPEmail" />
 
             <TextView
                 android:text="Birthday"
@@ -73,7 +73,7 @@
                 android:text="No Patient Entered"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView5" />
+                android:id="@+id/PIPBirthday" />
 
             <TextView
                 android:text="Sex"
@@ -85,7 +85,7 @@
                 android:text="No Patient Entered"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView8" />
+                android:id="@+id/PIPSex" />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>
